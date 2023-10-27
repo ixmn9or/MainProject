@@ -342,7 +342,12 @@
 -r:"Assets/ChessEngineAndAI/Modules/ChessEngine.AI.Guy/ChessEngine.AI.Guy.dll"
 -r:"Assets/ChessEngineAndAI/Modules/ChessEngine.AI.Riddle/ChessEngine.AI.Riddle.dll"
 -r:"Assets/ChessEngineAndAI/Modules/ChessEngine.AI/ChessEngine.AI.dll"
+-r:"Assets/DOTween/DOTween.dll"
+-r:"Assets/DOTween/Editor/DOTweenEditor.dll"
 -r:"Library/Bee/artifacts/200b0aE.dag/Assembly-CSharp.ref.dll"
+-r:"Library/Bee/artifacts/200b0aE.dag/NaughtyAttributes.Core.ref.dll"
+-r:"Library/Bee/artifacts/200b0aE.dag/NaughtyAttributes.Editor.ref.dll"
+-r:"Library/Bee/artifacts/200b0aE.dag/NaughtyAttributes.Test.ref.dll"
 -r:"Library/Bee/artifacts/200b0aE.dag/Unity.PlasticSCM.Editor.ref.dll"
 -r:"Library/Bee/artifacts/200b0aE.dag/Unity.Rider.Editor.ref.dll"
 -r:"Library/Bee/artifacts/200b0aE.dag/Unity.Services.Core.Analytics.ref.dll"
@@ -372,6 +377,13 @@
 "Assets/ChessEngineAndAI/Game/Scripts/Editor/TypeReferences/InitializeChessAITypeReferences.cs"
 "Assets/ChessEngineAndAI/Game/Scripts/Editor/TypeReferences/InitializeChessTypeReferences.cs"
 "Assets/ChessEngineAndAI/Game/Scripts/Editor/Visual/VisualChessTableTileEditor.cs"
+"Assets/HyperCasualPack/Scripts/Editor/MonitorCanvasEditor.cs"
+"Assets/HyperCasualPack/Scripts/Editor/SaveManagerEditor.cs"
+"Assets/ProceduralUIImage/Editor/FreeModifierEditor.cs"
+"Assets/ProceduralUIImage/Editor/ModifierUtility.cs"
+"Assets/ProceduralUIImage/Editor/ProceduralImageEditor.cs"
+"Assets/ProceduralUIImage/Editor/ProceduralImageEditorUtility.cs"
+"Assets/TutorialInfo/Scripts/Editor/ReadmeEditor.cs"
 -langversion:9.0
 
 /deterministic

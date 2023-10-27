@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 289176c9a89843f0a072b79d32597cfe, type: 3}
+  m_Name: PickableCollectorMultipleConditionRuleset
+  m_EditorClassIdentifier: 
+  TypeCountPairs:
+  - PickablePooler: {fileID: 11400000, guid: 154ad9e2e89d76643896ab8e1bfc44f4, type: 2}
+    Count: 3
+  - PickablePooler: {fileID: 11400000, guid: 581f606d51979254f9e1ac65248fcb88, type: 2}
+    Count: 5
+  OutputPooler: {fileID: 11400000, guid: 6750ede3637c52b4aa56559919578446, type: 2}

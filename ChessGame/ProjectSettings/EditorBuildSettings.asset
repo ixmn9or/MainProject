@@ -4,5 +4,12 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
-  m_configObjects: {}
+  m_Scenes:
+  - enabled: 1
+    path: Assets/ChessEngineAndAI/Game/Resources/Scenes/AI/ChessDemo_RiddleAI.unity
+    guid: fcc666f173f1e7f4bb85a831da11241a
+  m_configObjects:
+    com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: dd2ba959b830f61468680401491815c1,
+      type: 2}
+    com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000,
+      guid: 71ae4172da5990244ad2eccd846cbc77, type: 2}

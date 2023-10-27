@@ -343,6 +343,8 @@
 -r:"Assets/ChessEngineAndAI/Modules/ChessEngine.AI.Guy/ChessEngine.AI.Guy.dll"
 -r:"Assets/ChessEngineAndAI/Modules/ChessEngine.AI.Riddle/ChessEngine.AI.Riddle.dll"
 -r:"Assets/ChessEngineAndAI/Modules/ChessEngine.AI/ChessEngine.AI.dll"
+-r:"Assets/DOTween/DOTween.dll"
+-r:"Assets/DOTween/Editor/DOTweenEditor.dll"
 -r:"Library/Bee/artifacts/200b0aE.dag/Unity.Services.Core.Configuration.Editor.ref.dll"
 -r:"Library/Bee/artifacts/200b0aE.dag/Unity.Services.Core.Internal.ref.dll"
 -r:"Library/Bee/artifacts/200b0aE.dag/Unity.Services.Core.Networking.ref.dll"

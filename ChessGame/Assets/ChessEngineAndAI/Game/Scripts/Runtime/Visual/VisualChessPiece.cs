@@ -9,6 +9,8 @@ namespace ChessEngine.Game
     /// Use the generic IsPiece() to check what type of chess piece it is.
     /// </summary>
     /// Author: Intuitive Gaming Solutions
+
+    [RequireComponent (typeof (DoScale))]
     public class VisualChessPiece : MonoBehaviour
     {
         // MoveUnityEvent.
@@ -26,7 +28,11 @@ namespace ChessEngine.Game
 
         [Header("Settings - Materials")]
         [Tooltip("(Optional) An editor set reference to the Renderer for this chess piece.")]
-        [SerializeField] Renderer m_RendererOverride;
+        [SerializeField] Sprite blueSprite;
+        [SerializeField] Sprite yellowSprite;
+        [SerializeField] Sprite redSprite;
+        [SerializeField] Sprite greenSprite;
+        
         [Tooltip("An editor set reference to the material of this piece when it's on the white team.")]
         [SerializeField] Material m_WhiteMaterial = null;
         [Tooltip("An editor set reference to the material of this piece when it's on the black team.")]
@@ -50,14 +56,14 @@ namespace ChessEngine.Game
 
         // Unity callback(s).
         #region Unity Callbacks
-        void Awake()
+        void Start()
         {
-            // Find Renderer refrence if no override set.
-            if (m_RendererOverride == null)
+            if(ChessColor.White == Piece.Color) gameObject.transform.GetChild(0).transform.GetComponent<SpriteRenderer>().sprite = blueSprite;
+            else
             {
-                Renderer = GetComponentInChildren<Renderer>();
+                gameObject.transform.GetChild(0).transform.GetComponent<SpriteRenderer>().sprite = redSprite;
+                gameObject.transform.rotation = new Quaternion(0, 90, 0, gameObject.transform.rotation.w);
             }
-            else { Renderer = m_RendererOverride; }
         }
 
         void OnDestroy()
@@ -82,12 +88,6 @@ namespace ChessEngine.Game
             // Initialize renderer related stuff.
             if (Renderer != null)
             {
-                // Set piece color/team.
-                if (Piece.Color == ChessColor.White)
-                {
-                    Renderer.material = m_WhiteMaterial;
-                }
-                else { Renderer.material = m_BlackMaterial; }
             }
 
             // Update initial position for the chess piece.
@@ -159,6 +159,8 @@ namespace ChessEngine.Game
 
             // Invoke the relevant Unity event.
             Moved?.Invoke(pMoveInfo);
+            
+            gameObject.GetComponent<DoScale>().DoOut();
         }
 
         /// <summary>Invoked when the chess piece is captured.</summary>
