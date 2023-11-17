@@ -7,8 +7,16 @@ using UnityEngine;
 
 public class DoScale : MonoBehaviour
 {
+    private AudioSource moveAudio;
+
+    private void OnEnable()
+    {
+        moveAudio = GetComponent<AudioSource>();
+    }
+
     public void DoOut()
     {
+        moveAudio.Play();
         gameObject.transform.DOScale(1.3f, 0.8f)
             .SetEase(Ease.OutElastic)
             .OnComplete(SetBack);
